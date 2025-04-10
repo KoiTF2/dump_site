@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+        }
+
+        
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: grid;
+            grid-template-columns: 80px 240px;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .middle button {
+            background-color: #E0E0E0;
+            border-radius: 5px;
+            border: none;
+
+            text-align: left;
+            padding: 10px;
+        }
+
+        .unit_number {
+            text-align: right;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .exam_date {
+            padding-left: 10px;
+            display: grid;
+            grid-template-columns: 60px 200px;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .middle button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+                border: none;
+            }
+
+            .middle button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+                border: none;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../'">Home</button>
+            <button disabled>All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text" style="color: #00FF21;">Math 23</div>
+            <div>Elementary Analysis 3</div>
+        </div>
+
+        <div class="top_right bold_text">
+            <div class="brand_color">EEEpen</div>
+            .github.io
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="unit_number">Unit 1</div>
+        <div></div>
+
+        <div class="align_right">1.1</div>
+        <button onclick="window.location.href='unit1.1/page1/'">Functions</button>
+
+        <div class="align_right">1.2</div>
+        <button onclick="window.location.href='unit1.2/page1/'">Limits & Continuity</button>
+
+        <div class="align_right">1.3</div>
+        <button onclick="window.location.href='unit1.3/page1/'">Partial Derivatives</button>
+
+        <div class="align_right">1.4</div>
+        <button onclick="window.location.href='unit1.4/page1/'">Differentiability & LLA</button>
+
+        <div class="align_right">1.5</div>
+        <button onclick="window.location.href='unit1.5/page1/'">Chain Rule & Implicit</button>
+
+        <div class="align_right">1.6</div>
+        <button onclick="window.location.href='unit1.6/page1/'">Directional Derivatives</button>
+
+        <div></div>
+        <div class="exam_date">
+            <div>LE1</div>
+            <div class="bold_text">2025-2-19</div>
+
+            <div>pts</div>
+            <div>20.5/30  <span style="color: #A1FF00;">(68.33%)</span></div>
+        </div>
+
+
+        <div></div><div></div>
+        <div></div><div></div>
+
+
+        <div class="unit_number">Unit 2</div>
+        <div></div>
+
+        <div class="align_right">2.1</div>
+        <button onclick="window.location.href='unit2.1/page1/'">Topic 1</button>
+
+        <div class="align_right">2.2</div>
+        <button onclick="window.location.href='unit2.2/page1/'">Topic 2</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_middle_bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+
+
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box img {
+            max-width: 1000px;
+            height: auto;
+        }
+
+        .box_input {
+            width: 220px;
+            padding: 4px;
+            border: 4px solid #FF0000;
+
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+        }
+
+        .box_input_correct {
+            border: 4px solid #00FF00;
+        }
+
+        .textbox_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-self: end;
+        }
+
+        .textbox_table {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 20px;
+        }
+
+
+        /*  */
+        .fraction_stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .fraction_stack > :first-child {
+            border-bottom: 3px #fff solid;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+
+        .bottom {
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: max-content;
+            row-gap: 10px;
+        }
+
+        .button_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .box {
+                border-bottom: 2px solid #333;
+            }
+
+            .box_input {
+                background-color: #333;
+                color: #E0E0E0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../../../'">Home</button>
+            <button onclick="window.location.href='../../'">All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text">
+                <span style="color: #B200FF;">Gen Math</span>
+                w1
+                Arithmetic
+            </div>
+
+            <div class="top_middle_bottom">
+                <button disabled>Prev</button>
+                1/1
+                <button onclick="window.location.href='../page2'" disabled>Next</button>
+            </div>
+        </div>
+
+        <div class="top_right">
+            <div class="bold_text">
+                <span class="brand_color">EEEpen</span>.github.io
+            </div>
+            <div>2025-4-10</div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="box">
+            1. Evaluate:
+            <div class="textbox_table">
+                <div class="align_right"> 3 + 4 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '7')"></div>
+
+                <div class="align_right"> -3 - 5 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '-8')"></div>
+
+                <div class="align_right"> 7(3) = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '21')"></div>
+
+                <div class="align_right"> 20 ⋅ 17 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '340')"></div>
+
+                <div class="align_right"> 10 ⋅ 100 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '1000')"></div>
+            </div>
+        </div>
+
+        <div class="box">
+            2. Evaluate:
+            <div class="textbox_table">
+                <div class="align_right"> 36 / 4 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '9')"></div>
+
+                <div class="align_right"> 38 / 5 = </div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '7.6')"></div>
+
+                <div class="textbox_train">
+                    <div class="fraction_stack">
+                        <div> 2 </div>
+                        <div> 3 </div>
+                    </div>
+                    <div> + </div>
+                    <div class="fraction_stack">
+                        <div> 3 </div>
+                        <div> 4 </div>
+                    </div>
+                    <div> = </div>
+                </div>
+                <div class="fraction_stack">
+                    <div> <input type="text" class="box_input" oninput="check_match(this, '17')"> </div>
+                    <div> <input type="text" class="box_input" oninput="check_match(this, '12')"> </div>
+                </div>
+
+                <div class="align_right"> 15% of 80</div>
+                <div><input type="text" class="box_input" oninput="check_match(this, '12')"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        Answers:
+        <div class="button_stack">
+            <button onclick="window.open('answers/', '_blank')">Page</button>
+            <button onclick="window.open('https://www.youtube.com/@Aren10', '_blank')">YouTube</button>
+        </div>
+        <div>
+            <span class="brand_color">Aren</span> 2025
+        </div>
+    </div>
+
+    <script>
+        function check_match(input_object, correct_answer) {
+            if (input_object.value === correct_answer)
+                input_object.classList.add("box_input_correct");
+            else
+                input_object.classList.remove("box_input_correct");
+        }
+    </script>
+
+</body>
+</html>

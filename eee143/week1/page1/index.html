@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_middle_bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+
+
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box img {
+            max-width: 1000px;
+            height: auto;
+        }
+
+        .box_input {
+            width: 220px;
+            padding: 4px;
+            border: 4px solid #FF0000;
+
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+        }
+
+        .box_input_correct {
+            border: 4px solid #00FF00;
+        }
+
+        .textbox_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .textbox_table {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 20px;
+        }
+
+        .bottom {
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: max-content;
+            row-gap: 10px;
+        }
+
+        .button_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        /*  */
+        .binary_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            align-items: center;
+        }
+
+        .binary_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .binary_train input {
+            width: 20px;
+            text-align: center;
+        }
+
+        .opacity_zero {
+            opacity: 0;
+        }
+
+        .IEEE_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .IEEE_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .IEEE_binary_width {
+            width: 50px;
+        }
+
+        .IEEE_hex_width {
+            width: 20px;
+        }
+
+        .IEEE_train input {
+            text-align: center;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .box {
+                border-bottom: 2px solid #333;
+            }
+
+            .box_input {
+                background-color: #333;
+                color: #E0E0E0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../../../'">Home</button>
+            <button onclick="window.location.href='../../'">All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text">
+                <span style="color: #FF0000;">EEE 143</span>
+                w1
+                Number Systems
+            </div>
+
+            <div class="top_middle_bottom">
+                <button disabled>Prev</button>
+                1/2
+                <button onclick="window.location.href='../page2'">Next</button>
+            </div>
+        </div>
+
+        <div class="top_right">
+            <div class="bold_text">
+                <span class="brand_color">EEEpen</span>.github.io
+            </div>
+            <div>2025-1-24</div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="box">
+            <div>Write 10.5₁₀ following the 32-bit IEEE-754 standard.</div>
+            <div>Write the final answer in hexadecimal.</div>
+            <div></div>
+
+            <div>1) What is 10.5₁₀ in binary?</div>
+            <div class="binary_train">
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                    <div>━</div>
+                    <div>8</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>4</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                    <div>━</div>
+                    <div>2</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>1</div>
+                </div>
+
+                <div>.</div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                    <div>━</div>
+                    <div>0.5</div>
+                </div>
+
+                <div>· 2⁰</div>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div>2) What is the binary number after shifting?</div>
+            <div class="binary_train">
+                <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                <div>.</div>
+                <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                <div>· 2</div>
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '3')" maxlength="1">
+                    <div class="opacity_zero">_</div>
+                    <div class="opacity_zero">_</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div>3)</div>
+            binary number's exponent?
+            <input type="text" class="box_input" oninput="check_match(this, '3')">
+            IEEE-754 default bias?
+            <input type="text" class="box_input" oninput="check_match(this, '127')">
+            exponent + bias
+            <input type="text" class="box_input" oninput="check_match(this, '130')">
+        </div>
+
+        <div class="box">
+            <div>4) What is exponent + bias in binary?</div>
+            <div class="binary_train">
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                    <div>━</div>
+                    <div>128</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>64</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>32</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>16</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>8</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>4</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                    <div>━</div>
+                    <div>2</div>
+                </div>
+
+                <div class="binary_stack">
+                    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                    <div>━</div>
+                    <div>1</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="box">
+            5) Sign bit of 10.5₁₀?
+            <input type="text" class="box_input" oninput="check_match(this, '0')">
+        </div>
+
+        <div class="box">
+            6) String-add S + E + F
+            <div class="IEEE_train">
+
+                <div class="IEEE_stack">
+                    <div>bin</div>
+                    <div></div>
+                    <div></div>
+                    <div>hex</div>
+                </div>
+
+                <div class="IEEE_stack">
+                    <input type="text" class="box_input IEEE_binary_width" oninput="check_match(this, '0100')" maxlength="4">
+                    <input type="text" class="box_input IEEE_hex_width" oninput="check_match(this, '4')" maxlength="1">
+                </div>
+
+                <div class="IEEE_stack">
+                    <input type="text" class="box_input IEEE_binary_width" oninput="check_match(this, '0001')" maxlength="4">
+                    <input type="text" class="box_input IEEE_hex_width" oninput="check_match(this, '1')" maxlength="1">
+                </div>
+
+                <div class="IEEE_stack">
+                    <input type="text" class="box_input IEEE_binary_width" oninput="check_match(this, '0010')" maxlength="4">
+                    <input type="text" class="box_input IEEE_hex_width" oninput="check_match(this, '2')" maxlength="1">
+                </div>
+
+                <div class="IEEE_stack">
+                    <input type="text" class="box_input IEEE_binary_width" oninput="check_match(this, '1000')" maxlength="4">
+                    <input type="text" class="box_input IEEE_hex_width" oninput="check_match(this, '8')" maxlength="1">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="box">
+            7) 10.5₁₀ in IEEE-754 hexadecimal?
+            <input type="text" class="box_input" oninput="check_match(this, '0x41280000')">
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        Answers:
+        <div class="button_stack">
+            <button onclick="window.open('answers/', '_blank')">Page</button>
+            <button onclick="window.open('https://www.youtube.com/@Aren10', '_blank')">YouTube</button>
+        </div>
+        <div>
+            <span class="brand_color">Aren</span> 2025
+        </div>
+    </div>
+
+    <script>
+        function check_match(input_object, correct_answer) {
+            if (input_object.value === correct_answer)
+                input_object.classList.add("box_input_correct");
+            else
+                input_object.classList.remove("box_input_correct");
+        }
+    </script>
+
+</body>
+</html>

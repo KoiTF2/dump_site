@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_middle_bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+
+
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box img {
+            max-width: 1000px;
+            height: auto;
+        }
+
+        .box_input {
+            width: 220px;
+            padding: 4px;
+            border: 4px solid #FF0000;
+
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+        }
+
+        .box_input_correct {
+            border: 4px solid #00FF00;
+        }
+
+        .textbox_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .textbox_table {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 20px;
+        }
+
+        .bottom {
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: max-content;
+            row-gap: 10px;
+        }
+
+        .button_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        /*  */
+        .truth_table {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content;
+            align-items: center;
+            text-align: center;
+
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .truth_table input {
+            width: 20px;
+            text-align: center;
+        }
+
+        .algebra_input {
+            width: 40px;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .box {
+                border-bottom: 2px solid #333;
+            }
+
+            .box_input {
+                background-color: #333;
+                color: #E0E0E0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../../../'">Home</button>
+            <button onclick="window.location.href='../../'">All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text">
+                <span style="color: #FF0000;">EEE 143</span>
+                w3
+                Boolean Algebra
+            </div>
+
+            <div class="top_middle_bottom">
+                <button disabled>Prev</button>
+                1/2
+                <button onclick="window.location.href='../page2'">Next</button>
+            </div>
+        </div>
+
+        <div class="top_right">
+            <div class="bold_text">
+                <span class="brand_color">EEEpen</span>.github.io
+            </div>
+            <div>2025-2-7</div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="box">
+            <img src="question1.png">
+            <div></div>
+            1) What is the truth table?
+            <div></div>
+            <div class="truth_table">
+                <div>A</div>    <div>B</div>    <div style="color: #FF00DC;">X</div>    <div style="color: #FF006E;">Y</div>
+                <div>0</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+                <div>0</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                <div>1</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">
+                <div>1</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">
+            </div>
+        </div>
+
+        <div class="box">
+            2) Split the tables & find SSOP:
+            <div></div>
+
+            <div class="truth_table">
+                <div>A</div>    <div>B</div>    <div style="color: #FF00DC;">X</div>    <div>Product</div>
+                <div>0</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <div></div>
+                <div>0</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <div></div>
+                <div>1</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <div class="textbox_train"><div>→</div><input type="text" class="box_input" oninput="check_match(this, 'AB\'')" style="width: 40px;"><div>+</div></div>
+                <div>1</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <div class="textbox_train"><div>→</div><input type="text" class="box_input" oninput="check_match(this, 'AB')" style="width: 40px;"></div>
+            </div>
+
+
+            <div></div><div></div>
+            <div></div><div></div>
+
+
+            <div class="truth_table">
+                <div>A</div>    <div>B</div>    <div style="color: #FF006E;">Y</div>    <div>Product</div>
+                <div>0</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <div></div>
+                <div>0</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <div class="textbox_train"><div>→</div><input type="text" class="box_input" oninput="check_match(this, 'A\'B')" style="width: 40px;"><div>+</div></div>
+                <div>1</div>    <div>0</div>    <input type="text" class="box_input" oninput="check_match(this, '1')" maxlength="1">    <div class="textbox_train"><div>→</div><input type="text" class="box_input" oninput="check_match(this, 'AB\'')" style="width: 40px;"></div>
+                <div>1</div>    <div>1</div>    <input type="text" class="box_input" oninput="check_match(this, '0')" maxlength="1">    <div></div>
+            </div>
+        </div>
+
+        <div class="box">
+            3) What are the Minimized SOPs?
+            <div class="textbox_table align_right">
+                <div><span style="color: #FF00DC;">X</span> = </div>
+                <div class="textbox_train">
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'AB\'')">
+                    +
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'AB')">
+                </div>
+
+                =
+                <div class="textbox_train">
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'A')">
+                    (
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'B\'')">
+                    +
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'B')">
+                    )
+                </div>
+
+                =
+                <div class="textbox_train">
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'A')">
+                    (
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, '1')">
+                    )
+                </div>
+
+                =
+                <input type="text" class="box_input algebra_input" oninput="check_match(this, 'A')">
+
+
+                <div></div><div></div>
+
+
+                <div><span style="color: #FF006E;">Y</span> = </div>
+                <div class="textbox_train">
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'A\'B')">
+                    +
+                    <input type="text" class="box_input algebra_input" oninput="check_match(this, 'AB\'')">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div>4) What Logic Gate is <span style="color: #FF006E;">Y</span>?</div>
+            <input type="text" class="box_input" oninput="check_match(this, 'XOR')">
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        Answers:
+        <div class="button_stack">
+            <button onclick="window.open('answers/', '_blank')">Page</button>
+            <button onclick="window.open('https://www.youtube.com/@Aren10', '_blank')">YouTube</button>
+        </div>
+        <div>
+            <span class="brand_color">Aren</span> 2025
+        </div>
+    </div>
+
+    <script>
+        function check_match(input_object, correct_answer) {
+            if (input_object.value.toUpperCase() === correct_answer)
+                input_object.classList.add("box_input_correct");
+            else
+                input_object.classList.remove("box_input_correct");
+        }
+    </script>
+
+</body>
+</html>

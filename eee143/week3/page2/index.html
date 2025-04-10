@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_middle_bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+
+
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box img {
+            max-width: 1000px;
+            height: auto;
+        }
+
+        .box_input {
+            width: 220px;
+            padding: 4px;
+            border: 4px solid #FF0000;
+
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+        }
+
+        .box_input_correct {
+            border: 4px solid #00FF00;
+        }
+
+        .textbox_train {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .textbox_table {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .bottom {
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: max-content;
+            row-gap: 10px;
+        }
+
+        .button_stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+
+        /*  */
+        .truth_table {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content;
+            align-items: center;
+            text-align: center;
+
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .truth_table input {
+            width: 20px;
+            text-align: center;
+        }
+
+        .algebra_input {
+            width: 40px;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .box {
+                border-bottom: 2px solid #333;
+            }
+
+            .box_input {
+                background-color: #333;
+                color: #E0E0E0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../../../'">Home</button>
+            <button onclick="window.location.href='../../'">All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text">
+                <span style="color: #FF0000;">EEE 143</span>
+                w3
+                Boolean Algebra
+            </div>
+
+            <div class="top_middle_bottom">
+                <button onclick="window.location.href='../page1'">Prev</button>
+                2/2
+                <button disabled>Next</button>
+            </div>
+        </div>
+
+        <div class="top_right">
+            <div class="bold_text">
+                <span class="brand_color">EEEpen</span>.github.io
+            </div>
+            <div>2025-2-7</div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="box">
+            Summary
+            <img src="image1.png">
+            <div></div>
+            Truth table row:
+            <div></div>
+            <div class="truth_table">
+                <div>A</div>    <div>B</div>    <div style="color: #FF00DC;">X</div>    <div style="color: #FF006E;">Y</div>
+                <div>0</div>    <div>0</div>    <div>0</div>    <div>0</div>
+            </div>
+        </div>
+
+        <div class="box">
+
+            <div class="truth_table">
+                <div style="color: #FF0000;">A</div>    <div style="color: #FF6A00;">B</div>    <div style="color: #FF00DC;">X</div>    <div>Product</div>
+                <div>0</div>    <div>0</div>    <div>0</div>    <div></div>
+                <div>0</div>    <div>1</div>    <div>0</div>    <div></div>
+                <div>1</div>    <div>0</div>    <div>1</div>    <div class="textbox_train"><div>→</div>?</div>
+                <div>1</div>    <div>1</div>    <div>1</div>    <div class="textbox_train"><div>→</div>?</div>
+            </div>
+
+
+            <div></div><div></div>
+            Split the table inputs:
+            <div></div><div></div>
+
+
+            <div class="truth_table">
+                <div style="color: #FF0000;">A</div>    <div>vs</div>    <div style="color: #FF00DC;">X</div>    <div></div>
+                <div>1</div>    <div>=</div>    <div>1</div>    <div class="textbox_train"><div>→</div>A</div>
+                <div>1</div>    <div>=</div>    <div>1</div>    <div class="textbox_train"><div>→</div>A</div>
+            </div>
+
+
+            <div></div><div></div>
+
+
+            <div class="truth_table">
+                <div style="color: #FF6A00;">B</div>    <div>vs</div>    <div style="color: #FF00DC;">X</div>    <div></div>
+                <div>0</div>    <div>!=</div>    <div>1</div>    <div class="textbox_train"><div>→</div>B'</div>
+                <div>1</div>    <div>=</div>    <div>1</div>    <div class="textbox_train"><div>→</div>B</div>
+            </div>
+
+
+            <div></div><div></div>
+            Now combine them:
+            <div></div><div></div>
+
+
+            <div class="truth_table">
+                <div style="color: #FF0000;">A</div>    <div style="color: #FF6A00;">B</div>    <div style="color: #FF00DC;">X</div>    <div>Product</div>
+                <div>0</div>    <div>0</div>    <div>0</div>    <div></div>
+                <div>0</div>    <div>1</div>    <div>0</div>    <div></div>
+                <div>1</div>    <div>0</div>    <div>1</div>    <div class="textbox_train"><div>→</div>AB' + </div>
+                <div>1</div>    <div>1</div>    <div>1</div>    <div class="textbox_train"><div>→</div>AB</div>
+            </div>
+        </div>
+
+        <div class="box">
+            Minimization
+            <div class="textbox_table">
+                <div class="align_right"><span style="color: #FF00DC;">X</span> = </div>
+                <div>AB' + AB</div>
+
+                <div class="align_right">Theorem →</div>
+                Expression
+
+                <div class="align_right">Distributive →</div>
+                A ( B' + B )
+
+                <div class="align_right">Complement →</div>
+                A ( 1 )
+
+                <div class="align_right">Identity →</div>
+                A
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="truth_table">
+                <div>A</div>    <div>B</div>    <div style="color: #FF006E;">Y</div>    <div></div>
+                <div>0</div>    <div>0</div>    <div>0</div>    <div></div>
+                <div>0</div>    <div>1</div>    <div>1</div>    <div></div>
+                <div>1</div>    <div>0</div>    <div>1</div>    <div></div>
+                <div>1</div>    <div>1</div>    <div>0</div>    <div></div>
+            </div>
+
+            <div></div>
+
+            <div class="textbox_table align_right">
+                <div>(-1) =</div>    <div>-1</div>
+                <div>(-1)(-1) =</div>    <div>1</div>
+                <div>(-1)(-1)(-1) =</div>    <div>-1</div>
+                <div>(-1)(-1)(-1)(-1) =</div>    <div>1</div>
+            </div>
+
+
+            <div></div><div></div>
+
+
+            <div>XOR is like multiplication of (-1)</div>
+
+            <div class="textbox_table">
+                <div class="align_right">odd numbers on → output on</div>    <div></div>
+                <div class="align_right">even numbers on → output off</div>    <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        Explained:
+        <button onclick="window.open('https://www.youtube.com/@Aren10', '_blank')">YouTube</button>
+        <div>
+            <span class="brand_color">Aren</span> 2025
+        </div>
+    </div>
+
+    <script>
+        function check_match(input_object, correct_answer) {
+            if (input_object.value.toUpperCase() === correct_answer)
+                input_object.classList.add("box_input_correct");
+            else
+                input_object.classList.remove("box_input_correct");
+        }
+    </script>
+
+</body>
+</html>

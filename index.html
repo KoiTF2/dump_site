@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+        }
+
+
+        /*  */
+        .middle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .boxes_title {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .boxes {
+            max-width: 80%;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 250px;
+            background-color: #E0E0E0;
+            border-radius: 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .box_name {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .box_description {
+            font-size: 1em;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .box {
+                background-color: #303030;
+                color: #E0E0E0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button disabled>Home</button>
+            <button onclick="window.location.href='about/'">About</button>
+        </div>
+
+        <div class="top_middle bold_text">
+            <div class="brand_color">Aren</div>
+            Notebook
+        </div>
+
+        <div class="top_right bold_text">
+            <div class="brand_color">EEEpen</div>
+            .github.io
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="boxes_title">warm up</div>
+        <div class="boxes">
+            <div class="box" onclick="window.location.href='gen_math/'">
+                <div class="box_name" style="color: #B200FF;">Gen Math</div>
+                <div class="box_description">General Mathematics</div>
+            </div>
+        </div>
+
+        <div class="boxes_title">m2x</div>
+        <div class="boxes">
+            <div class="box" onclick="window.location.href='math23/'">
+                <div class="box_name" style="color: #00FF21;">Math 23</div>
+                <div class="box_description">Elementary Analysis 3</div>
+            </div>
+
+            <div class="box" class="big-button" onclick="window.location.href='math40/'">
+                <div class="box_name" style="color: #FFD800;">Math 40</div>
+                <div class="box_description">Linear Algebra</div>
+            </div>
+        </div>
+
+        <div></div>
+
+        <div class="boxes_title">14x</div>
+        <div class="boxes">
+            <div class="box" onclick="window.location.href='eee143/'">
+                <div class="box_name" style="color: #FF0000;">EEE 143</div>
+                <div class="box_description">Switching Theory and <br> Digital Logic Design</div>
+            </div>
+
+            <div class="box" onclick="window.location.href='eee147/'">
+                <div class="box_name" style="color: #B200FF;">EEE 147</div>
+                <div class="box_decription">Signals and Systems</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

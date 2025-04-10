@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEEpen</title>
+    <link rel="icon" href="/about/icon_32px.png">
+
+    <style>
+
+        @font-face {
+            font-family: "arial_rounded";
+            src: url("/about/arial_rounded.ttf");
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .brand_color {
+            color: #C00000;
+        }
+
+        body {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+
+            background-color: #E0E0E0;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        button:disabled {
+            background-color: #F0F0F0;
+            border: 1px solid #DDD;
+            cursor: default;
+            color: #AAA;
+        }
+
+        .top {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 16px;
+
+            background-color: #F0F0F0;
+            align-items: center;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .top button {
+            font-family: "arial_rounded", sans-serif;
+            font-size: 13.5px;
+        }
+
+        .top_left {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .top_middle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .top_right {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+        }
+
+        
+        /*  */
+        .align_right {
+            text-align: right;
+        }
+
+        .middle {
+            display: grid;
+            grid-template-columns: 80px 240px;
+            align-items: center;
+
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .middle button {
+            background-color: #E0E0E0;
+            border-radius: 5px;
+            border: none;
+
+            text-align: left;
+            padding: 10px;
+        }
+
+        .unit_number {
+            text-align: right;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .exam_date {
+            padding-left: 10px;
+            display: grid;
+            grid-template-columns: 60px 200px;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .brand_color {
+                color: #FF0000;
+            }
+
+            body {
+                background-color: #121212;
+                color: #E0E0E0;
+            }
+
+            button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+            }
+
+            .top {
+                background-color: #212121;
+            }
+
+
+            /*  */
+            .middle button {
+                background-color: #333;
+                border: 1px solid #555;
+                color: #E0E0E0;
+                border: none;
+            }
+
+            .middle button:disabled {
+                background-color: #222;
+                border: 1px solid #444;
+                color: #888;
+                border: none;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="top">
+        <div class="top_left">
+            <button onclick="window.location.href='../'">Home</button>
+            <button disabled>All Topics</button>
+        </div>
+
+        <div class="top_middle">
+            <div class="bold_text" style="color: #FF0000;">EEE 143</div>
+            <div>Switching Theory & Digital Logic Design</div>
+        </div>
+
+        <div class="top_right bold_text">
+            <div class="brand_color">EEEpen</div>
+            .github.io
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="middle">
+        <div class="unit_number">Unit 1</div>
+        <div></div>
+
+        <div class="align_right">w1</div>
+        <button onclick="window.location.href='week1/page1/'">Number Systems</button>
+
+        <div class="align_right">w2</div>
+        <button onclick="window.location.href='week2/page1/'">Boolean Logic</button>
+
+        <div class="align_right">w3</div>
+        <button onclick="window.location.href='week3/page1/'">Boolean Algebra</button>
+
+        <div class="align_right">w4</div>
+        <button onclick="window.location.href='week4/page1/'">Karnaugh Maps</button>
+
+        <div class="align_right">w5</div>
+        <button onclick="window.location.href='week5/page1/'">Computer Arithmetic</button>
+
+        <div class="align_right">w6</div>
+        <button onclick="window.location.href='week6/page1/'">Data Selectors</button>
+
+        <div class="align_right">w7</div>
+        <button onclick="window.location.href='week7/page1/'">Logic Delay</button>
+
+        <div></div>
+        <div class="exam_date">
+            <div>LE1</div>
+            <div class="bold_text">2025-3-15</div>
+
+            <div>pts</div>
+            <div>xx/100  <span style="color: #99FF00;">(70%)</span></div>
+        </div>
+
+
+        <div></div><div></div>
+        <div></div><div></div>
+
+
+        <div class="unit_number">Unit 2</div>
+        <div></div>
+
+        <div class="align_right">w8</div>
+        <button onclick="window.location.href='week8/page1/'">Sequential Circuits</button>
+
+        <div class="align_right">w9</div>
+        <button onclick="window.location.href='week9/page1/'">Synchronous Circuits</button>
+
+        <div class="align_right">w10</div>
+        <button onclick="window.location.href='week10/page1/'">State Minimization</button>
+
+        <div class="align_right">w11</div>
+        <button onclick="window.location.href='week11/page1/'">Synthesis</button>
+
+        <div class="align_right">w13</div>
+        <button onclick="window.location.href='week13/page1/'">Alternative Synthesis</button>
+
+        <div class="align_right">w14</div>
+        <button onclick="window.location.href='week14/page1/'">Flip-flop Non-idealities</button>
+
+        <div class="align_right">w15</div>
+        <button onclick="window.location.href='week15/page1/'">Algorithmic State Machines</button>
+
+        <div class="align_right">w16</div>
+        <button onclick="window.location.href='week16/page1/'">Processor Design</button>
+
+        <div></div>
+        <div class="exam_date">
+            <div>LE2</div>
+            <div class="bold_text">2025-5-24</div>
+        </div>
+    </div>
+
+</body>
+</html>
